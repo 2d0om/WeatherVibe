@@ -1,6 +1,6 @@
 /* Background Image */
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1920&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 48, 73, 0.4)), url('https://images.unsplash.com/photo-1552650272-b8a34e21bc4b?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -14,15 +14,15 @@ body {
 .container > div {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 119, 182, 0.2);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(144, 224, 239, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .container > div:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 119, 182, 0.2);
 }
 
 /* Custom transitions and animations */
@@ -34,29 +34,31 @@ body {
 
 /* Smooth input focus effect */
 #cityInput:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 3px rgba(144, 224, 239, 0.3);
     transform: translateY(-1px);
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 #cityInput {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(144, 224, 239, 0.5);
 }
 
 /* Button hover enhancement */
 #getWeatherBtn {
-    background: rgba(59, 130, 246, 0.8);
+    background: rgba(0, 119, 182, 0.8);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: all 0.3s ease;
+    border: 1px solid rgba(144, 224, 239, 0.5);
 }
 
 #getWeatherBtn:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
-    background: rgba(59, 130, 246, 0.9);
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.4);
+    background: rgba(0, 119, 182, 0.9);
 }
 
 #getWeatherBtn:active {
@@ -65,26 +67,28 @@ body {
 
 /* Weather info cards hover effect */
 .bg-gray-50 {
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(144, 224, 239, 0.15) !important;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(144, 224, 239, 0.3);
 }
 
 .bg-gray-50:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    background: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.2);
+    background: rgba(144, 224, 239, 0.2) !important;
 }
 
-/* Text colors for dark theme */
+/* Text colors for tropical theme */
 .text-gray-800 {
     color: white !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .text-gray-600 {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: rgba(144, 224, 239, 0.9) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Smooth container reveal */
@@ -148,14 +152,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(241, 245, 249, 0.1);
+    background: rgba(144, 224, 239, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 119, 182, 0.3);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(0, 119, 182, 0.4);
 } 
