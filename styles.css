@@ -1,38 +1,28 @@
-/* Animated Background */
+/* Background Image */
 body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    color: white;
 }
 
 /* Glassmorphism effect for containers */
 .container > div {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 12px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .container > div:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Custom transitions and animations */
@@ -75,16 +65,26 @@ body {
 
 /* Weather info cards hover effect */
 .bg-gray-50 {
-    background: rgba(255, 255, 255, 0.6) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .bg-gray-50:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Text colors for dark theme */
+.text-gray-800 {
+    color: white !important;
+}
+
+.text-gray-600 {
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 /* Smooth container reveal */
@@ -148,14 +148,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(241, 245, 249, 0.3);
+    background: rgba(241, 245, 249, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(148, 163, 184, 0.5);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(100, 116, 139, 0.6);
+    background: rgba(255, 255, 255, 0.4);
 } 
