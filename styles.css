@@ -1,3 +1,40 @@
+/* Animated Background */
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Glassmorphism effect for containers */
+.container > div {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* Custom transitions and animations */
 .transition-all {
     transition-property: all;
@@ -7,14 +44,29 @@
 
 /* Smooth input focus effect */
 #cityInput:focus {
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
     transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#cityInput {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 /* Button hover enhancement */
+#getWeatherBtn {
+    background: rgba(59, 130, 246, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
 #getWeatherBtn:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    background: rgba(59, 130, 246, 0.9);
 }
 
 #getWeatherBtn:active {
@@ -23,12 +75,16 @@
 
 /* Weather info cards hover effect */
 .bg-gray-50 {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .bg-gray-50:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8) !important;
 }
 
 /* Smooth container reveal */
@@ -54,23 +110,28 @@
     animation: spin 1s linear infinite;
 }
 
-/* Gradient background animation */
-body {
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-}
-
-@keyframes gradientBG {
+/* Floating animation for cards */
+@keyframes float {
     0% {
-        background-position: 0% 50%;
+        transform: translateY(0px);
     }
     50% {
-        background-position: 100% 50%;
+        transform: translateY(-5px);
     }
     100% {
-        background-position: 0% 50%;
+        transform: translateY(0px);
     }
 }
+
+.grid > div {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Stagger the floating animation for each card */
+.grid > div:nth-child(1) { animation-delay: 0s; }
+.grid > div:nth-child(2) { animation-delay: 0.2s; }
+.grid > div:nth-child(3) { animation-delay: 0.4s; }
+.grid > div:nth-child(4) { animation-delay: 0.6s; }
 
 /* Mood suggestion text fade in */
 #moodSuggestion {
@@ -87,14 +148,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: rgba(241, 245, 249, 0.3);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #94a3b8;
+    background: rgba(148, 163, 184, 0.5);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #64748b;
+    background: rgba(100, 116, 139, 0.6);
 } 
